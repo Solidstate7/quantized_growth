@@ -9,7 +9,7 @@ function calculateDaysForContractIncrements(
   const results = [];
 
   while (currentContracts < maxContracts) {
-    let accountSize = currentContracts * initialMargin; // $1,000 margin per contract
+    let accountSize = currentContracts * initialMargin; // Initial margin per contract
     let targetSize = (currentContracts + 1) * initialMargin;
 
     while (accountSize < targetSize) {
@@ -25,9 +25,9 @@ function calculateDaysForContractIncrements(
 }
 
 // Example usage
-const profitRatioPerDay = 0.025; // 2.5% profit per day
-const initialContractSize = 5; // Starting with 1 contract
-const maxContracts = 2000; // Calculate until reaching 100 contracts
+const profitRatioPerDay = 0.025; // Profit ratio per day
+const initialContractSize = 5; // Starting with contract size N
+const maxContracts = 2000; // Calculate until reaching M contracts
 
 const increments = calculateDaysForContractIncrements(
   initialContractSize,
